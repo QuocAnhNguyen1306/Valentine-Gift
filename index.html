@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container2">
+      <div class="content">
+        <canvas id="universe"></canvas>
+      </div>
+    </div>
+    <div class="title">
+      <h3 class="STARDUST3">Happy Valentine Minh Anh <strong>❤</strong></h3>
+      <button onclick="showSurprise()">Bấm vào đây nè!</button>
+      <script>
+        function showSurprise() {
+            alert("Một mùa valentine vui vẻ nhe người bạn đặc biệt của t. Chúc m luôn vui vẻ và hạnh phúc với gia đình. Mong mọi điều tốt đẹp sẽ đến với m. (^v^)");
+         }
+         function createHeart() {
+            const heart = document.createElement("div");
+            heart.className = "heart";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+            document.body.appendChild(heart);
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+        setInterval(createHeart, 300);
+      </script>
+      <img class="img" src="download (1).png" alt="JUNO_OKYO" />
+      <canvas id="pinkboard"></canvas>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script src="particle.js"></script>
+    <script src="universe.js"></script>
+  </body>
+</html>
